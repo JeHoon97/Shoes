@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function send(frm){
+		var title = frm.title.value.trim();
+		var img = frm.image.value.trim();
+		
+		if(title == ""){
+			alert("제목을 입력하세요!!");
+			return;
+		}
+		
+		if(img == ""){
+			alert("파일을 첨부하세요!!");
+			return;
+		}
+		frm.submit();
+	}
+</script>
+
+</head>
+<body>
+	<form action="../upload.do" method="post" enctype="multipart/form-data">
+		제목 : <input type="text" name="title"/><br/>
+		첨부 : <input type="file" name="image"><br/>
+		<input type="button" value="업로드" onclick="send(this.form)"/>
+	</form>
+</body>
+</html>
