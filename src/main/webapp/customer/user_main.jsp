@@ -21,7 +21,7 @@
 <main>
 	<div class="container mt-5 d-flex">
 		<section class="w-100 ps-5">
-		<h3 class="mb-1"></h3>
+		<h3 class="mb-2"></h3>
 			<%				
 			ProductDAO pDao = ProductDAO.getInstance();
 			ArrayList<ProductDTO> pDtos = null;
